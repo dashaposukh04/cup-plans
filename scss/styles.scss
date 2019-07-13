@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'normalize';
+@import 'mixins';
+
+*{
+	box-sizing: border-box;
+	
+}
+
+html {
+	font: 10px/1.6 'Lato', sans-serif;
+	height: 100%;
+}
+body {
+	font-size: 2rem;
+	background-color: #FDDE7E;
+	color: #333333;
+	min-height: 100%;
+	display: flex;	
+	align-items:center;
+}
+
+.container{	
+	width: 100%;
+	min-width: 900px;
+	max-width: 1500px;
+	margin: auto;	
+}
+
+.row{	
+	display: flex;
+	flex-wrap:nowrap;
+	justify-content:space-around;
+	flex-direction: row; 
+	align-items:center;
+	height: 600px;
+}
+
+.col{	
+	flex-basis: 30%;
+	margin: 1%;	
+	background-color: #fff;
+	height: 450px;	
+	padding: 40px 60px;	
+	
+	&:nth-child(2n){
+		height: 550px;	
+		padding: 50px 60px;				
+	}
+	@include hover {
+		transform:  scale(1.1);		
+	}
+
+}
+.coffee{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;	
+	text-align: center;
+	width: 100%;
+	
+	&__link{
+		text-decoration: none;
+	}	
+	
+	&__title{
+		color: #333333;
+		overflow: hidden;
+		&--name{
+			font-size: 5.6rem;
+			font-weight: 300;
+			margin: 0;
+			letter-spacing: -0.3rem;			
+		}
+		&--description{
+			font-size: 2rem;
+			display: block;			
+		}
+		&--price{
+			display: block;
+
+		}
+	}	
+}
+
